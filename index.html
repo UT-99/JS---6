@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="mainheading">JS - Handoson : 6 Problem Solving</h1>
+
+    <div class="boxes">
+        <h2>Ques. 1 Find the Smaller Angle </h2>
+        <pre class="code">
+            var Minimal_Angle = (h, m) => 
+            {
+                   let hourAngel = ((h * 360)/12) + ((m * 360) / (12 * 60));
+                   let minAngel = (m * 360) / 60;
+                   angel = Math.abs(hourAngel - minAngel);
+                   if (angel > 180){
+                     angel = 360 - angel ;
+                   }
+                 
+                   return angel;
+                   
+            };
+        </pre>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="boxes">
+        <h2>Ques. 2 Check whether the year is Leap year or not. </h2>
+        <pre class="code"> 
+        var Check_Leap = (year) => 
+            {
+               if (year % 100 === 0 )
+               {
+                 if (year % 400 === 0 ){
+                   return 'Leap Year';
+                 }
+                 else {
+                   return 'Non Leap Year';
+                 }
+               }
+               
+               else if ( year % 4 === 0 )
+                return 'Leap Year';
+               else 
+                 return 'Non Leap Year';
+            
+        };
+            
+        </pre>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="boxes">
+        <h2>Ques. 3 Perfect Number Check. </h2>
+        <pre class="code"> 
+        var Perfect_Check = (N) => 
+            {
+                  var sum = 0 ;  
+                  if (N === 1)
+                    return 'YES';
+                  else {
+                    for ( let  i = 1 ; i <= parseInt( N / 2 ) ; i++){
+                      if ( N % i === 0){
+                        sum = sum + i;
+                      }
+                    }
+                    if (sum === N ){
+                      return 'YES'
+                    }
+                    else 
+                     return 'NO'
+                  }
+                    
+            };
+    
+        </pre>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="boxes">
+        <h2>Ques. 4 Reverse a Number. </h2>
+        <pre class="code"> 
+        var Reverse_Number = (N) => 
+            {
+              var temp = N;
+              var quotient = N;
+              var remainder = 0 ;
+              var reversedNumber = 0 ;
+              
+              while (quotient > 0 ){
+                remainder = quotient % 10 ;
+                reversedNumber = ( reversedNumber * 10 ) + remainder;
+                quotient = parseInt(quotient / 10);
+              }
+            
+              return reversedNumber;
+            
+            };
+        </pre>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    
+    <div class="boxes">
+        <h2>Ques. 5 Substring Check. </h2>
+        <pre class="code">
+        var Substring_Check = (S1, S2) => 
+            {
+                return S1.includes(S2) ? 'YES' : 'NO';
+            };
+             
+            
+        </pre>
+    </div>
+
+    <h1 class="mainheading">*************************</h1>
+    
+
+
+
+</body>
+</html>
